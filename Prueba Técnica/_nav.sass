@@ -1,0 +1,48 @@
+$c-pri: #001c59
+$c-sec: #e00c49
+nav
+    background-color: $c-pri
+    display: flex
+    height: 100px
+    align-items: center
+    justify-content: center
+    li
+        float: left
+        display: block
+    a
+        color: white
+        text-decoration: none
+        text-align: center
+        padding: 16px
+        font-size: 14px
+        font-weight: 700
+
+.logoDSRP
+    height: 53px
+    width: 140px
+
+@mixin button-nav($border: solid, $backcolor: $c-pri)
+    color: white
+    border: $border
+    background-color: $backcolor
+    padding-top: 6px
+    padding-bottom: 6px
+    padding-left: 16px
+    padding-right: 16px
+    margin-top: 25px
+    margin-bottom: 25px
+    margin-left: 12px
+    margin-right: 12px
+    border-radius: 24px
+    font-size: 14px
+    font-weight: 700
+    font-family: inherit
+    height: fit-content
+
+.t1-white
+    @include button-nav
+    border-color: white
+    border-width: 2px
+
+.t2-pink
+    @include button-nav($border: none, $backcolor: $c-sec)

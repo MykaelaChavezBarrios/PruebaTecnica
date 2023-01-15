@@ -1,0 +1,90 @@
+$c-pri: #001c59
+$c-sec: #e00c49
+$c-but: #E4EBF2
+$icondrop: "./Resources/dropdown.png"
+$iconcase: "./Resources/briefcase.png"
+$iconclock: "./Resources/clock.png"
+#sec3
+    display: flex
+    flex-direction: row-reverse
+    justify-content: center
+#right
+    background-color: $c-pri
+    height: 650px
+    width: 27%
+    border-radius: 15px
+    color: white
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    h3
+        font-family: inherit
+        font-size: 25px
+        font-weight: lighter
+#left
+    height: 680px
+    width: 50%
+    color: $c-pri
+    margin-right: 35px
+    form
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 100px
+        padding: 20px
+        img
+            width: 100px
+            height: 50px
+.divisor
+    height: 1px
+    width: 100%
+    background-color: lightgray
+
+.postular
+    color: white
+    border: none
+    background-color: $c-sec
+    border-radius: 4px
+    font-size: 13px
+    font-weight: 600
+    font-family: inherit
+    padding-top: 0.5rem
+    padding-bottom: 0.5rem
+    padding-left: 1.5rem
+    padding-right: 1.5rem
+
+.info
+    width: 70%
+    height: 80px
+    padding: 30px
+    padding-bottom: 0px
+    font-size: 18px
+    h3
+        margin: 0px
+    button
+        color: $c-pri
+        background-color: $c-but
+        border: none
+        border-radius: 24px
+        font-weight: 600
+        font-size: 10px
+        font-family: inherit
+        height: 18px
+        width: 80px
+
+@mixin button-info($url: $iconclock, $size: 10px)
+    background-image: url(#{$url})
+    background-size: $size $size
+    background-repeat: no-repeat
+    background-position: 2px center
+    text-align: center
+
+.clock
+    @include button-info($size: 15px)
+
+.case
+    @include button-info($url: $iconcase)
+
+.drop
+    @include button-info($url: $icondrop, $size: 15px)
